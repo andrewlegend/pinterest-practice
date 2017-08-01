@@ -31,11 +31,10 @@ class User
     end
     
     def delete_pins(key)
-        if @pins [key.to_sym]
-            delete_pins(key)
-        else 
-            puts "You never pinned that pin"
-    @pins.delete(key.to_sym)
+    if @pins [key.to_sym]
+    delete_pins(key.to_sym)
+    else 
+    puts "You never pinned that pin"
     end
 end
 
@@ -56,4 +55,4 @@ sabers_pinterest.pin_it("vacation", "puerto rico")
 
 sabers_pinterest.my_pins
 
-sabers_pinterest.delete_pins("cooking")
+sabers_pinterest.delete_pins.("cooking")
